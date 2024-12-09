@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import './Styles/Comprar.css';
+import './Styles/comprar.css';
 import { FaShoppingCart } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';  // Importar useNavigate
 
