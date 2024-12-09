@@ -7,7 +7,7 @@ on:
 
 jobs:
   deploy:
-    runs-on: ubuntu-latest # Cambiar a 'ubuntu-latest' si no es estrictamente necesario usar Windows
+    runs-on: windows-latest # Cambiar a 'ubuntu-latest' si no es estrictamente necesario usar Windows
 
     env:
       GOOGLE_APPLICATION_CREDENTIALS: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}
@@ -33,13 +33,14 @@ jobs:
       - name: Install Firebase CLI
         run: npm install -g firebase-tools
 
-      - name: Authenticate Firebase
-        run: firebase login:ci --token ${{ secrets.FIREBASE_TOKEN }}
-
-      - name: Select Firebase Project
-        run: firebase use --add deploy-2178d
+      - name: Select Host
+        env:
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+        run: firebase use deploy-2178d
 
       - name: Deploy to Firebase
+        env:
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }} # Necesitas configurar este secreto
         run: firebase deploy
 
       - name: Success Message
