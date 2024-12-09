@@ -1,0 +1,12 @@
+body {
+  margin: 0;
+  min-width: 320px; /* Mantén esto solo si es necesario */
+  min-height: 100vh; /* Mantén esto solo si es necesario */
+  display: block; /* Cambiado de flex a block */
+}
+
+body {
+  background-color: #fffdd059; /* Fondo crema */
+  margin: 0; /* Elimina márgenes por defecto */
+  font-family: Arial, sans-serif; /* Opcional */
+}

@@ -1,0 +1,64 @@
+/* Estilos generales */
+.tabla-feriados {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-family: 'Arial', sans-serif;
+    table-layout: fixed; /* Fija el ancho de las columnas */
+    word-wrap: break-word; /* Evita el desbordamiento de palabras largas */
+}
+
+.tabla-feriados th,
+.tabla-feriados td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    word-wrap: break-word; /* Evita que el contenido de las celdas se desborde */
+}
+
+.tabla-feriados th {
+    background-color: #007BFF;
+    color: white;
+    font-size: 16px;
+}
+
+.tabla-feriados tr:hover {
+    background-color: #f1f1f1;
+}
+
+.tabla-feriados td a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.tabla-feriados td a:hover {
+    text-decoration: underline;
+}
+
+.tabla-feriados td ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+/* Estilo para hacer la tabla responsiva en pantallas pequeñas */
+@media (max-width: 768px) {
+    .tabla-feriados {
+        display: block; /* Hacemos que la tabla sea un bloque */
+        overflow-x: auto; /* Agregamos scroll horizontal */
+        -webkit-overflow-scrolling: touch; /* Mejor experiencia de scroll en dispositivos táctiles */
+    }
+
+    .tabla-feriados th,
+    .tabla-feriados td {
+        font-size: 14px; /* Reducimos el tamaño de la fuente en pantallas pequeñas */
+        padding: 8px; /* Reducimos el padding */
+    }
+
+    .tabla-feriados th {
+        font-size: 14px; /* Reducimos el tamaño de la fuente de los encabezados */
+    }
+
+    h1 {
+        font-size: 20px; /* Ajustamos el tamaño del título */
+    }
+}
