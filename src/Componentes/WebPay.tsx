@@ -1,4 +1,3 @@
-import React from "react";
 import "./Styles/WebPay.css"; // Archivo CSS externo para estilos
 
 const WebPay = () => {
